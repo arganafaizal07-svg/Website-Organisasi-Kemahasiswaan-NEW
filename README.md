@@ -65,7 +65,7 @@ Disarankan membuka website menggunakan browser modern seperti:
 
 ##  Pengembangan Selanjutnya
 
-* Menambahkan animasi dan interaksi JavaScript
+* Menambahkan Backend/Database untuk form pendaftaran
 * Merapihkan Tampilan Mobile
 * Menambahkan form kontak
 * Optimalisasi tampilan UI/UX
