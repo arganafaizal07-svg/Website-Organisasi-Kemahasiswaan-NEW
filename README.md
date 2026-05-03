@@ -51,14 +51,6 @@ Project ini merupakan website profil Himpunan Mahasiswa UHAMKA yang dibuat mengg
 └── README.md
 ```
 
----
-
-##  Cara Menjalankan Project
-
-1. Download atau clone repository ini
-2. Buka folder project
-3. Klik dua kali file `index.html`
-4. Website akan terbuka di browser
 
 ---
 
