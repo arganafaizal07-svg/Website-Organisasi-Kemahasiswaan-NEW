@@ -1,20 +1,20 @@
-# 🌐 Website Himpunan Mahasiswa UHAMKA
+# Website Himpunan Mahasiswa UHAMKA
 
-## 📌 Deskripsi
+## Deskripsi
 
 Project ini merupakan website profil Himpunan Mahasiswa UHAMKA yang dibuat menggunakan HTML, CSS, dan JavaScript. Website ini bertujuan untuk menampilkan informasi seputar himpunan, kegiatan, galeri, serta media lainnya secara interaktif dan menarik.
 
 ---
 
-## 🚀 Fitur Utama
+## Fitur Utama
 
-* 🏠 Halaman Beranda (Home)
-* 📖 Halaman Tentang (About)
-* 🖼️ Galeri Foto & Video
-* 🎧 Halaman Audio
-* 👥 Informasi Himpunan Mahasiswa (HIMA)
-* 🔗 Navigasi antar halaman
-* 💡 Tampilan sederhana dan mudah digunakan
+*  Halaman Beranda (Home)
+*  Halaman Tentang (About)
+*  Galeri Foto & Video
+*  Halaman Audio
+*  Informasi Himpunan Mahasiswa (HIMA)
+*  Navigasi antar halaman
+*  Tampilan sederhana dan mudah digunakan
 
 ---
 
@@ -26,7 +26,7 @@ Project ini merupakan website profil Himpunan Mahasiswa UHAMKA yang dibuat mengg
 
 ---
 
-## 📂 Struktur Project
+## Struktur Project
 
 ```
 /project-folder
@@ -53,7 +53,7 @@ Project ini merupakan website profil Himpunan Mahasiswa UHAMKA yang dibuat mengg
 
 ---
 
-## ▶️ Cara Menjalankan Project
+##  Cara Menjalankan Project
 
 1. Download atau clone repository ini
 2. Buka folder project
@@ -62,7 +62,7 @@ Project ini merupakan website profil Himpunan Mahasiswa UHAMKA yang dibuat mengg
 
 ---
 
-## 📱 Catatan
+##  Catatan
 
 Disarankan membuka website menggunakan browser modern seperti:
 
@@ -71,9 +71,10 @@ Disarankan membuka website menggunakan browser modern seperti:
 
 ---
 
-## ✨ Pengembangan Selanjutnya
+##  Pengembangan Selanjutnya
 
 * Menambahkan animasi dan interaksi JavaScript
+* Merapihkan Tampilan Mobile
 * Menambahkan form kontak
 * Optimalisasi tampilan UI/UX
 
