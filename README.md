@@ -18,7 +18,7 @@ Project ini merupakan website profil Himpunan Mahasiswa UHAMKA yang dibuat mengg
 
 ---
 
-## 🛠️ Teknologi yang Digunakan
+##  Teknologi yang Digunakan
 
 * HTML5
 * CSS3
