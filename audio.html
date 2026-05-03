@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audio - POM FTII UHAMKA</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <i class="fas fa-university"></i>
+                <span>POM FTII UHAMKA</span>
+            </div>
+            <button class="menu-toggle" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="tentang.html">Tentang</a></li>
+                <li class="nav-item dropdown">
+                    <a href="#" class="dropbtn">Organisasi Mahasiswa <i class="fas fa-caret-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="hima-ti.html">HIMA TI</a></li>
+                        <li><a href="hima-tm.html">HIMA TM</a></li>
+                        <li><a href="hima-te.html">HIMA TE</a></li>
+                        <li><a href="hima-sti.html">HIMA STI</a></li>
+                        <li><a href="hima-trm.html">HIMA TRM</a></li>
+                    </ul>
+                </li>
+                <li><a href="galeri-foto.html">Galeri Foto</a></li>
+                <li><a href="galeri-video.html">Galeri Video</a></li>
+                <li><a href="audio.html">Audio</a></li>
+                <li><a href="daftar.html">Open Recruitment</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <h1>Galeri Audio</h1>
+        <p>Rekaman audio kegiatan, pidato, dan dokumentasi HIMA FTII UHAMKA.</p>
+    </section>
+
+    <!-- Content -->
+    <section class="content-section">
+        <div class="container">
+            <!-- Category Tabs -->
+            <div style="display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; margin-bottom: 40px;">
+                <button class="btn btn-secondary" onclick="filterAudio('semua')" style="background: #667eea;">Semua</button>
+                <button class="btn btn-secondary" onclick="filterAudio('musik')">Musik</button>
+                <button class="btn btn-secondary" onclick="filterAudio('pidato')">Pidato</button>
+                <button class="btn btn-secondary" onclick="filterAudio('tausiyah')">Tausiyah</button>
+                <button class="btn btn-secondary" onclick="filterAudio('podcast')">Podcast</button>
+            </div>
+
+            <!-- Audio List -->
+            <ul class="audio-list">
+                <!-- Musik -->
+                <li class="audio-item" data-category="musik">
+                    <div style="display: flex; justify-content: space-between; align-items: start;">
+                        <div>
+                            <h3><i class="fas fa-music"></i> Lagu Kebanggaan HIMA FTII</h3>
+                            <p><strong>Kategori:</strong> Musik | <strong>Durasi:</strong> 4:32 | <strong>Tanggal:</strong> 10 Jan 2024</p>
+                            <p>Lagu resmi HIMA FTII yang menggambarkan semangat kebersamaan mahasiswa.</p>
+                        </div>
+                    </div>
+                    <audio controls style="width: 100%; margin-top: 15px;">
+                        <source src="data:audio/mp3;base64,SUQzBAAAAAAAI1RTU0UAAAAPAAADTGF2ZnV0aWwvNTguNzYuMTAwAAAAAAAAAAAAAAD/7UEsUAEAAAACAABRoQECZ2F1c3AAAgAAAAAAAAASANAUCwIAAAAC/7UEsUAHAAAAAgAAUaEBAmdhAAAAAAAAEgDQFAsCAAAAAv/7UEsUAIAAAACAAFGhAQJnYXVzAAIAAAAAAAAAEgDQFAsCAAAAAA==" type="audio/mpeg">
+                    </audio>
+                </li>
+
+                <li class="audio-item" data-category="musik">
+                    <div>
+                        <h3><i class="fas fa-music"></i> Instrumen Pembukaan Acara</h3>
+                        <p><strong>Kategori:</strong> Musik | <strong>Durasi:</strong> 3:15 | <strong>Tanggal:</strong> 15 Jan 2024</p>
+                        <p>Musik instrumen yang digunakan sebagai pembukaan acara-acara HIMA FTII.</p>
+                    </div>
+                    <audio controls style="width: 100%; margin-top: 15px;">
+                        <source src="" type="audio/mpeg">
+                    </audio>
+                </li>
+
+                <!-- Pidato -->
+                <li class="audio-item" data-category="pidato">
+                    <div>
+                        <h3><i class="fas fa-microphone"></i> Pidato Ketua Umum di Mukernas 2024</h3>
+                        <p><strong>Kategori:</strong> Pidato | <strong>Durasi:</strong> 12:45 | <strong>Tanggal:</strong> 20 Jan 2024</p>
+                        <p>Pidato pembukaan Musyawarah Kerja Nasional HIMA FTII oleh Ketua Umum.</p>
+                    </div>
+                    <audio controls style="width: 100%; margin-top: 15px;">
+                        <source src="" type="audio/mpeg">
+                    </audio>
+                </li>
+
+                <li class="audio-item" data-category="pidato">
+                    <div>
+                        <h3><i class="fas fa-microphone"></i> Pidato Motivasi: Semangat Berorganisasi</h3>
+                        <p><strong>Kategori:</strong> Pidato | <strong>Durasi:</strong> 18:20 | <strong>Tanggal:</strong> 25 Jan 2024</p>
+                        <p>Pidato motivasi tentang pentingnya semangat dan dedikasi dalam berorganisasi.</p>
+                    </div>
+                    <audio controls style="width: 100%; margin-top: 15px;">
+                        <source src="" type="audio/mpeg">
+                    </audio>
+                </li>
+
+                <!-- Tausiyah -->
+                <li class="audio-item" data-category="tausiyah">
+                    <div>
+                        <h3><i class="fas fa-hands-praying"></i> Tausiyah: Nilai-Nilai Kepemimpinan Islami</h3>
+                        <p><strong>Kategori:</strong> Tausiyah | <strong>Durasi:</strong> 25:30 | <strong>Tanggal:</strong> 5 Feb 2024</p>
+                        <p>Tausiyah dari pembimbing spiritual tentang kepemimpinan islami dalam organisasi.</p>
+                    </div>
+                    <audio controls style="width: 100%; margin-top: 15px;">
+                        <source src="" type="audio/mpeg">
+                    </audio>
+                </li>
+
+                <li class="audio-item" data-category="tausiyah">
+                    <div>
+                        <h3><i class="fas fa-hands-praying"></i> Tausiyah: Integritas dan Amanah</h3>
+                        <p><strong>Kategori:</strong> Tausiyah | <strong>Durasi:</strong> 22:15 | <strong>Tanggal:</strong> 12 Feb 2024</p>
+                        <p>Tausiyah tentang pentingnya menjaga integritas dan amanah dalam setiap tanggung jawab.</p>
+                    </div>
+                    <audio controls style="width: 100%; margin-top: 15px;">
+                        <source src="" type="audio/mpeg">
+                    </audio>
+                </li>
+
+                <!-- Podcast -->
+                <li class="audio-item" data-category="podcast">
+                    <div>
+                        <h3><i class="fas fa-podcast"></i> Podcast HIMA FTII: Kisah Sukses Anggota</h3>
+                        <p><strong>Kategori:</strong> Podcast | <strong>Durasi:</strong> 35:45 | <strong>Tanggal:</strong> 1 Feb 2024</p>
+                        <p>Podcast yang menampilkan kisah sukses dan pengalaman anggota HIMA FTII.</p>
+                    </div>
+                    <audio controls style="width: 100%; margin-top: 15px;">
+                        <source src="" type="audio/mpeg">
+                    </audio>
+                </li>
+
+                <li class="audio-item" data-category="podcast">
+                    <div>
+                        <h3><i class="fas fa-podcast"></i> Podcast: Tips Organisasi Efektif</h3>
+                        <p><strong>Kategori:</strong> Podcast | <strong>Durasi:</strong> 28:20 | <strong>Tanggal:</strong> 8 Feb 2024</p>
+                        <p>Podcast diskusi tentang strategi dan tips menjalankan organisasi secara efektif dan efisien.</p>
+                    </div>
+                    <audio controls style="width: 100%; margin-top: 15px;">
+                        <source src="" type="audio/mpeg">
+                    </audio>
+                </li>
+
+                <li class="audio-item" data-category="podcast">
+                    <div>
+                        <h3><i class="fas fa-podcast"></i> Podcast: Kepemimpinan Muda di Era Digital</h3>
+                        <p><strong>Kategori:</strong> Podcast | <strong>Durasi:</strong> 42:10 | <strong>Tanggal:</strong> 15 Feb 2024</p>
+                        <p>Podcast mendalam tentang tantangan dan peluang kepemimpinan muda di era digital.</p>
+                    </div>
+                    <audio controls style="width: 100%; margin-top: 15px;">
+                        <source src="" type="audio/mpeg">
+                    </audio>
+                </li>
+            </ul>
+
+            <!-- Statistics -->
+            <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 40px; border-radius: 10px; margin-top: 60px; text-align: center;">
+                <h2 style="margin-bottom: 30px;">Koleksi Audio HIMA FTII</h2>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 30px;">
+                    <div>
+                        <p style="font-size: 2rem; font-weight: bold;">15+</p>
+                        <p>Total Audio</p>
+                    </div>
+                    <div>
+                        <p style="font-size: 2rem; font-weight: bold;">5</p>
+                        <p>Kategori</p>
+                    </div>
+                    <div>
+                        <p style="font-size: 2rem; font-weight: bold;">4 jam+</p>
+                        <p>Total Durasi</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>POM FTII UHAMKA</h4>
+                    <p>Portal terpusat untuk informasi, dokumentasi, dan interaksi seluruh organisasi mahasiswa FTII UHAMKA.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Kontak</h4>
+                    <p>Email: info@ftii-uhamka.ac.id</p>
+                    <p>Telepon: +62 21-740-4688</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Ikuti Kami</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 POM FTII UHAMKA. Semua hak dilindungi.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        function filterAudio(category) {
+            const items = document.querySelectorAll('.audio-item');
+            items.forEach(item => {
+                if (category === 'semua') {
+                    item.style.display = 'block';
+                } else {
+                    if (item.getAttribute('data-category') === category) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                }
+            });
+        }
+    </script>
+</body>
+</html>

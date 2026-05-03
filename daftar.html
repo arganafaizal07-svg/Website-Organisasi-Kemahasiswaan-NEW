@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Open Recruitment - POM FTII UHAMKA</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <i class="fas fa-university"></i>
+                <span>POM FTII UHAMKA</span>
+            </div>
+            <button class="menu-toggle" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="tentang.html">Tentang</a></li>
+                <li class="nav-item dropdown">
+                    <a href="#" class="dropbtn">Organisasi Mahasiswa <i class="fas fa-caret-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="hima-ti.html">HIMA TI</a></li>
+                        <li><a href="hima-tm.html">HIMA TM</a></li>
+                        <li><a href="hima-te.html">HIMA TE</a></li>
+                        <li><a href="hima-sti.html">HIMA STI</a></li>
+                        <li><a href="hima-trm.html">HIMA TRM</a></li>
+                    </ul>
+                </li>
+                <li><a href="galeri-foto.html">Galeri Foto</a></li>
+                <li><a href="galeri-video.html">Galeri Video</a></li>
+                <li><a href="audio.html">Audio</a></li>
+                <li><a href="daftar.html">Open Recruitment</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <h1>Open Recruitment</h1>
+        <p>Bergabunglah dengan HIMA FTII UHAMKA dan kembangkan potensimu bersama kami.</p>
+    </section>
+
+    <!-- Content -->
+    <section class="content-section">
+        <div class="container">
+            <div style="max-width: 600px; margin: 0 auto;">
+                <div style="background: #f8f9fa; padding: 30px; border-radius: 10px; margin-bottom: 40px;">
+                    <h2 style="margin-bottom: 20px;">Syarat & Ketentuan Pendaftaran</h2>
+                    <ul style="line-height: 1.8; color: #555;">
+                        <li>✓ Mahasiswa aktif Universitas Muhammadiyah Prof. Dr. Hamka</li>
+                        <li>✓ Telah lulus masa orientasi (jika ada)</li>
+                        <li>✓ Berkomitmen mengikuti kegiatan akademik universitas</li>
+                        <li>✓ Memiliki karakter dan integritas baik</li>
+                        <li>✓ Bersedia mematuhi peraturan dan tata tertib universitas</li>
+                    </ul>
+                </div>
+
+                <form class="form-container" onsubmit="return validateForm()">
+                    <h2 style="margin-bottom: 30px; text-align: center;">Formulir Pendaftaran Anggota HIMA FTII</h2>
+
+                    <!-- Nama -->
+                    <div class="form-group">
+                        <label for="nama">Nama Lengkap *</label>
+                        <input type="text" id="nama" name="nama" placeholder="Masukkan nama lengkap Anda" required>
+                    </div>
+
+                    <!-- Email -->
+                    <div class="form-group">
+                        <label for="email">Email *</label>
+                        <input type="email" id="email" name="email" placeholder="nama@wageningen.ac.id" required>
+                    </div>
+
+                    <!-- Nomor Induk -->
+                    <div class="form-group">
+                        <label for="npm">Nomor Induk Mahasiswa (NPM) *</label>
+                        <input type="text" id="npm" name="npm" placeholder="Contoh: 2403015041" maxlength="10" required>
+                    </div>
+
+                    <!-- Tanggal Lahir -->
+                    <div class="form-group">
+                        <label for="tgllahir">Tanggal Lahir *</label>
+                        <input type="date" id="tgllahir" name="tgllahir" required>
+                    </div>
+
+                    <!-- Nomor Telepon -->
+                    <div class="form-group">
+                        <label for="telepon">Nomor Telepon *</label>
+                        <input type="tel" id="telepon" name="telepon" placeholder="+62 8xx xxxx xxxx" required>
+                    </div>
+
+                    <!-- Program Studi -->
+                    <div class="form-group">
+                        <label for="prodi">Program Studi *</label>
+                        <select id="prodi" name="prodi" required>
+                            <option value="">-- Pilih Program Studi --</option>
+                            <option value="teknik-informatika">Teknik Informatika</option>
+                            <option value="teknik-mesin">Teknik Mesin</option>
+                            <option value="teknik-sipil">Teknik Sipil</option>
+                            <option value="teknik-elektro">Teknik Elektro</option>
+                            <option value="manajemen">Manajemen</option>
+                            <option value="akuntansi">Akuntansi</option>
+                            <option value="agribisnis">Agribisnis</option>
+                            <option value="pendidikan">Pendidikan</option>
+                        </select>
+                    </div>
+
+                    <!-- Divisi -->
+                    <div class="form-group">
+                        <label for="divisi">Divisi Pilihan *</label>
+                        <select id="divisi" name="divisi" required>
+                            <option value="">-- Pilih Divisi --</option>
+                            <option value="internal">Divisi Internal</option>
+                            <option value="external">Divisi External</option>
+                            <option value="acara">Divisi Acara</option>
+                            <option value="keuangan">Divisi Keuangan</option>
+                            <option value="kebijakan">Divisi Kebijakan</option>
+                            <option value="komunikasi">Divisi Komunikasi</option>
+                        </select>
+                    </div>
+
+                    <!-- Pengalaman Organisasi -->
+                    <div class="form-group">
+                        <label for="pengalaman">Pengalaman Organisasi (opsional)</label>
+                        <textarea id="pengalaman" name="pengalaman" placeholder="Ceritakan pengalaman Anda dalam organisasi sebelumnya (jika ada)"></textarea>
+                    </div>
+
+                    <!-- Motivasi -->
+                    <div class="form-group">
+                        <label for="motivasi">Motivasi Bergabung dengan HIMA FTII *</label>
+                        <textarea id="motivasi" name="motivasi" placeholder="Jelaskan motivasi Anda bergabung dengan HIMA FTII" required style="min-height: 100px;"></textarea>
+                    </div>
+
+                    <!-- Alamat -->
+                    <div class="form-group">
+                        <label for="alamat">Alamat Tinggal (opsional)</label>
+                        <textarea id="alamat" name="alamat" placeholder="Masukkan alamat tinggal Anda" style="min-height: 80px;"></textarea>
+                    </div>
+
+                    <!-- Checkbox Agreement -->
+                    <div class="form-group checkbox">
+                        <input type="checkbox" id="agreement" name="agreement" required>
+                        <label for="agreement" style="margin: 0;">Saya setuju dengan syarat dan ketentuan HIMA FTII</label>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <button type="submit" class="form-submit">
+                        <i class="fas fa-check-circle"></i> Daftar Sekarang
+                    </button>
+
+                    <!-- Reset Button -->
+                    <button type="reset" style="width: 100%; padding: 12px; background: #ccc; color: #333; border: none; border-radius: 5px; font-size: 1rem; font-weight: bold; cursor: pointer; margin-top: 10px; transition: 0.3s;">
+                        <i class="fas fa-redo"></i> Reset
+                    </button>
+                </form>
+
+                <!-- Info Box -->
+                <div style="background: #e3f2fd; padding: 25px; border-radius: 10px; margin-top: 40px; border-left: 5px solid #667eea;">
+                    <h3 style="color: #667eea; margin-bottom: 15px;">
+                        <i class="fas fa-info-circle"></i> Informasi Penting
+                    </h3>
+                    <p style="margin-bottom: 10px;">
+                        <strong>Verifikasi Data:</strong> Tim kami akan memverifikasi data Anda dalam 2-3 hari kerja.
+                    </p>
+                    <p style="margin-bottom: 10px;">
+                        <strong>Hubungi Kami:</strong> Jika ada pertanyaan, hubungi:
+                    </p>
+                    <p style="margin-bottom: 10px;">
+                        Email: <strong>admission@ftii-uhamka.ac.id</strong>
+                    </p>
+                    <p>
+                        WhatsApp: <strong>+62 812 3456 7890</strong>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>POM FTII UHAMKA</h4>
+                    <p>Portal terpusat untuk informasi, dokumentasi, dan interaksi seluruh organisasi mahasiswa FTII UHAMKA.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Kontak</h4>
+                    <p>Email: info@ftii-uhamka.ac.id</p>
+                    <p>Telepon: +62 21-740-4688</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Ikuti Kami</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 POM FTII UHAMKA. Semua hak dilindungi.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

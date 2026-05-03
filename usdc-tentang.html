@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tentang Kami - USDC (UHAMKA Nexus Center Student Development Center)</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #1a5490 0%, #2d7ba6 100%);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        header .subtitle {
+            font-size: 1.1rem;
+            opacity: 0.95;
+        }
+
+        /* Main Content */
+        .content {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+        }
+
+        /* Section Styling */
+        section {
+            margin-bottom: 50px;
+        }
+
+        section:last-child {
+            margin-bottom: 0;
+        }
+
+        h2 {
+            color: #1a5490;
+            font-size: 2rem;
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 3px solid #2d7ba6;
+            display: inline-block;
+        }
+
+        h3 {
+            color: #2d7ba6;
+            font-size: 1.3rem;
+            margin-top: 20px;
+            margin-bottom: 15px;
+        }
+
+        p {
+            margin-bottom: 15px;
+            text-align: justify;
+            color: #555;
+        }
+
+        /* Deskripsi Organisasi */
+        .deskripsi {
+            background-color: #f0f7ff;
+            padding: 25px;
+            border-left: 5px solid #1a5490;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+
+        .deskripsi p {
+            margin: 0;
+            color: #333;
+        }
+
+        /* Visi */
+        .visi-box {
+            background: linear-gradient(135deg, #1a5490 0%, #2d7ba6 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .visi-box p {
+            margin: 0;
+            font-size: 1.1rem;
+            color: white;
+            text-align: justify;
+        }
+
+        /* Misi List */
+        .misi-list {
+            list-style: none;
+            margin: 20px 0;
+        }
+
+        .misi-list li {
+            background: #f8f9fa;
+            padding: 20px;
+            margin-bottom: 15px;
+            border-left: 5px solid #2d7ba6;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        .misi-list li:hover {
+            background: #e8f1f8;
+            transform: translateX(5px);
+        }
+
+        .misi-list li::before {
+            content: "✓ ";
+            color: #1a5490;
+            font-weight: bold;
+            font-size: 1.2rem;
+            margin-right: 10px;
+        }
+
+        /* Sejarah */
+        .timeline {
+            margin: 30px 0;
+        }
+
+        .timeline-item {
+            padding-left: 30px;
+            margin-bottom: 25px;
+            position: relative;
+        }
+
+        .timeline-item::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 5px;
+            width: 15px;
+            height: 15px;
+            background: #2d7ba6;
+            border-radius: 50%;
+            border: 3px solid white;
+            box-shadow: 0 0 0 3px #2d7ba6;
+        }
+
+        .timeline-item::after {
+            content: "";
+            position: absolute;
+            left: 6px;
+            top: 25px;
+            width: 2px;
+            height: 30px;
+            background: #2d7ba6;
+        }
+
+        .timeline-item:last-child::after {
+            display: none;
+        }
+
+        .timeline-year {
+            font-weight: bold;
+            color: #1a5490;
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+        }
+
+        .timeline-text {
+            color: #555;
+        }
+
+        /* Nilai-Nilai Inti */
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin: 30px 0;
+        }
+
+        .value-card {
+            background: white;
+            padding: 25px;
+            border-radius: 8px;
+            border-top: 5px solid #2d7ba6;
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+            transition: 0.3s;
+        }
+
+        .value-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+        }
+
+        .value-card h4 {
+            color: #1a5490;
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+
+        .value-icon {
+            font-size: 1.8rem;
+            margin-right: 10px;
+            width: 40px;
+            height: 40px;
+            background: #e8f1f8;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .value-card p {
+            color: #666;
+            font-size: 0.95rem;
+            margin: 0;
+        }
+
+        /* Call to Action */
+        .cta-section {
+            background: linear-gradient(135deg, #1a5490 0%, #2d7ba6 100%);
+            color: white;
+            padding: 40px;
+            border-radius: 10px;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .cta-section h3 {
+            color: white;
+            margin-bottom: 15px;
+        }
+
+        .cta-section p {
+            color: white;
+            margin-bottom: 25px;
+            text-align: center;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background: white;
+            color: #1a5490;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: 0.3s;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .btn:hover {
+            background: #f0f7ff;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.8rem;
+            }
+
+            header .subtitle {
+                font-size: 1rem;
+            }
+
+            .content {
+                padding: 25px;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            .values-grid {
+                grid-template-columns: 1fr;
+            }
+
+            section {
+                margin-bottom: 35px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header {
+                padding: 40px 15px;
+                margin-bottom: 30px;
+            }
+
+            header h1 {
+                font-size: 1.5rem;
+            }
+
+            .content {
+                padding: 20px;
+                border-radius: 8px;
+            }
+
+            h2 {
+                font-size: 1.3rem;
+            }
+
+            h3 {
+                font-size: 1.1rem;
+            }
+
+            .deskripsi {
+                padding: 20px;
+            }
+
+            .visi-box {
+                padding: 20px;
+            }
+
+            .misi-list li {
+                padding: 15px;
+            }
+
+            .value-card {
+                padding: 20px;
+            }
+        }
+
+        /* Print Styling */
+        @media print {
+            header {
+                background: #1a5490;
+            }
+
+            .content {
+                box-shadow: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>USDC</h1>
+            <p class="subtitle">UHAMKA Nexus Center Student Development Center</p>
+            <p class="subtitle">Universitas Muhammadiyah Prof. Dr. Hamka</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="content">
+            <!-- Deskripsi Organisasi -->
+            <section id="deskripsi">
+                <h2>Deskripsi Organisasi</h2>
+                
+                <div class="deskripsi">
+                    <p>
+                        UHAMKA Nexus Center Student Development Center (USDC) adalah organisasi kemahasiswaan yang berfungsi sebagai wadah pengembangan holistik bagi seluruh mahasiswa Universitas Muhammadiyah Prof. Dr. Hamka (UHAMKA Nexus Center). Organisasi ini didirikan dengan komitmen untuk mengembangkan mahasiswa secara akademik, spiritual, sosial, dan karakter yang kokoh. USDC percaya bahwa pengembangan diri mahasiswa tidak hanya terbatas pada aspek intelektual, tetapi juga mencakup pembangunan kepribadian yang berakhlak mulia sesuai dengan nilai-nilai Islam dan kemuhammadiyahan. Melalui berbagai program dan kegiatan, USDC berusaha menciptakan mahasiswa yang tidak hanya pandai secara akademik, tetapi juga memiliki integritas tinggi dan kepedulian terhadap masyarakat luas.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Visi -->
+            <section id="visi">
+                <h2>Visi</h2>
+                
+                <div class="visi-box">
+                    <p>
+                        Menjadi pusat pengembangan mahasiswa yang menghasilkan generasi muda beriman, cerdas, inovatif, dan memiliki komitmen kuat dalam mengabdi kepada masyarakat serta berdaya saing secara global, dengan tetap memegang teguh nilai-nilai Islam dan kemuhammadiyahan.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Misi -->
+            <section id="misi">
+                <h2>Misi</h2>
+                
+                <ul class="misi-list">
+                    <li>
+                        <strong>Mengembangkan Potensi Akademik dan Spiritual Mahasiswa</strong>
+                        <p style="margin-top: 8px; margin-bottom: 0; font-size: 0.95rem;">Menyediakan program pembelajaran, mentoring, dan bimbingan spiritual yang komprehensif untuk mengoptimalkan potensi akademik, kepemimpinan, dan religiusitas mahasiswa UHAMKA Nexus Center.</p>
+                    </li>
+                    
+                    <li>
+                        <strong>Mendorong Inovasi dan Entrepreneurship</strong>
+                        <p style="margin-top: 8px; margin-bottom: 0; font-size: 0.95rem;">Memfasilitasi pengembangan ide-ide inovatif, penelitian mahasiswa, dan semangat kewirausahaan untuk menciptakan solusi nyata bagi permasalahan sosial dan ekonomi.</p>
+                    </li>
+                    
+                    <li>
+                        <strong>Membina Kepemimpinan Berkualitas dan Berintegritas</strong>
+                        <p style="margin-top: 8px; margin-bottom: 0; font-size: 0.95rem;">Melatih dan mengembangkan mahasiswa menjadi pemimpin yang visioner, bertanggung jawab, transparan, dan mampu memberikan teladan positif di lingkungan kampus dan masyarakat.</p>
+                    </li>
+                    
+                    <li>
+                        <strong>Memperkuat Kepedulian Sosial dan Pengabdian Masyarakat</strong>
+                        <p style="margin-top: 8px; margin-bottom: 0; font-size: 0.95rem;">Mengorganisir kegiatan-kegiatan sosial, bakti sosial, dan program pemberdayaan masyarakat yang mencerminkan nilai-nilai kemuhammadiyahan dalam memberikan manfaat nyata bagi kehidupan masyarakat.</p>
+                    </li>
+                    
+                    <li>
+                        <strong>Mempromosikan Kebersamaan dan Inklusi</strong>
+                        <p style="margin-top: 8px; margin-bottom: 0; font-size: 0.95rem;">Membangun komunitas mahasiswa yang kohesif, inklusif, dan saling mendukung, dengan menghormati keberagaman dan memupuk rasa persatuan di antara seluruh anggota organisasi.</p>
+                    </li>
+                </ul>
+            </section>
+
+            <!-- Sejarah Singkat -->
+            <section id="sejarah">
+                <h2>Sejarah Singkat</h2>
+                
+                <p>
+                    UHAMKA Nexus Center Student Development Center (USDC) didirikan pada tahun 2012 oleh sekelompok mahasiswa UHAMKA Nexus Center yang memiliki visi sama dalam mengembangkan potensi mahasiswa secara menyeluruh. Pada awal berdirinya, organisasi ini hadir sebagai respons terhadap kebutuhan mahasiswa akan wadah yang dapat mengembangkan kemampuan akademik, kepemimpinan, dan kepedulian sosial secara bersamaan.
+                </p>
+
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-year">2012 - Pendirian USDC</div>
+                        <div class="timeline-text">
+                            USDC diresmikan dengan 50 anggota pendiri. Program pertama yang diluncurkan adalah seminar akademik dan pelatihan kepemimpinan dasar untuk mahasiswa angkatan pertama.
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-year">2014 - Ekspansi Program</div>
+                        <div class="timeline-text">
+                            Organisasi berkembang menjadi 200+ anggota aktif. Peluncuran program reguler seperti Bimbingan Belajar (BimBel), Workshop Keterampilan, dan kegiatan Bakti Sosial bulanan.
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-year">2016 - Penghargaan Pertama</div>
+                        <div class="timeline-text">
+                            USDC menerima penghargaan "Organisasi Mahasiswa Terbaik" dari UHAMKA Nexus Center atas kontribusinya dalam pengembangan mahasiswa dan kepedulian sosial yang konsisten.
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-year">2018 - Inovasi Program</div>
+                        <div class="timeline-text">
+                            Meluncurkan program inovatif seperti Inkubator Bisnis Mahasiswa, Forum Diskusi Ilmiah Bulanan, dan Mentoring One-on-One dengan profesional berpengalaman.
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-year">2020-2024 - Era Digital dan Adaptasi</div>
+                        <div class="timeline-text">
+                            Bertransformasi menuju era digital dengan meluncurkan platform e-learning, webinar virtual, dan community engagement online. Saat ini USDC memiliki 500+ anggota aktif dan terus berinovasi untuk memberikan dampak positif bagi pengembangan mahasiswa UHAMKA Nexus Center.
+                        </div>
+                    </div>
+                </div>
+
+                <p style="margin-top: 30px;">
+                    Perjalanan USDC selama lebih dari satu dekade menunjukkan komitmen yang kuat terhadap pengembangan mahasiswa. Dengan dukungan dari pimpinan universitas, dosen pembimbing, dan partisipasi aktif mahasiswa, USDC terus berkembang dan menghadirkan program-program yang relevan dan berdampak bagi kemajuan kampus dan masyarakat luas.
+                </p>
+            </section>
+
+            <!-- Nilai-Nilai Inti -->
+            <section id="nilai-inti">
+                <h2>Nilai-Nilai Inti</h2>
+                
+                <div class="values-grid">
+                    <div class="value-card">
+                        <h4>
+                            <span class="value-icon">🕌</span>
+                            Keislaman
+                        </h4>
+                        <p>
+                            Semua kegiatan USDC didasarkan pada nilai-nilai Islam yang universal, inklusif, dan relevan dengan kehidupan modern. Kami percaya bahwa pendidikan dan pengembangan diri harus sejalan dengan ajaran-ajaran Islam yang mengutamakan integritas, keadilan, dan kebaikan.
+                        </p>
+                    </div>
+
+                    <div class="value-card">
+                        <h4>
+                            <span class="value-icon">✨</span>
+                            Integritas
+                        </h4>
+                        <p>
+                            Kami berkomitmen untuk menjunjung tinggi kejujuran, transparansi, dan tanggung jawab dalam setiap aspek organisasi. Setiap anggota USDC diharapkan menjadi teladan dalam hal integritas dan dapat dipercaya oleh rekan-rekan dan masyarakat luas.
+                        </p>
+                    </div>
+
+                    <div class="value-card">
+                        <h4>
+                            <span class="value-icon">💡</span>
+                            Inovasi
+                        </h4>
+                        <p>
+                            USDC mendorong semangat kreativitas, pemikiran kritis, dan inovasi dalam menghadapi tantangan. Kami percaya bahwa mahasiswa harus mampu mengadaptasi perubahan zaman dan menghadirkan solusi-solusi baru untuk masa depan yang lebih baik.
+                        </p>
+                    </div>
+
+                    <div class="value-card">
+                        <h4>
+                            <span class="value-icon">👥</span>
+                            Kepemimpinan
+                        </h4>
+                        <p>
+                            Kami mengembangkan kepemimpinan yang visioner, berani mengambil keputusan, dan bertanggung jawab atas dampak dari keputusan tersebut. Kepemimpinan dalam USDC dibangun atas dasar melayani, memberdayakan, dan menginspirasi orang lain.
+                        </p>
+                    </div>
+
+                    <div class="value-card">
+                        <h4>
+                            <span class="value-icon">🤝</span>
+                            Kepedulian Sosial
+                        </h4>
+                        <p>
+                            USDC memiliki komitmen yang mendalam terhadap kesejahteraan masyarakat. Kami percaya bahwa mahasiswa memiliki tanggung jawab moral untuk berkontribusi positif dalam masyarakat dan membantu mengurangi berbagai bentuk kesenjangan sosial.
+                        </p>
+                    </div>
+
+                    <div class="value-card">
+                        <h4>
+                            <span class="value-icon">🎯</span>
+                            Keunggulan
+                        </h4>
+                        <p>
+                            Kami selalu berupaya mencapai standar tertinggi dalam setiap aspek kegiatan organisasi. Keunggulan bukan hanya tentang prestasi akademik, tetapi juga tentang memberikan kontribusi terbaik dan berdampak signifikan bagi pengembangan mahasiswa dan masyarakat.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Call to Action -->
+            <div class="cta-section">
+                <h3>Bergabunglah dengan USDC</h3>
+                <p>
+                    Jadilah bagian dari komunitas mahasiswa yang berkomitmen untuk pengembangan diri, inovasi, dan kepedulian sosial. Bersama-sama kita membangun masa depan yang lebih baik untuk kampus dan masyarakat.
+                </p>
+                <button class="btn">Daftar Sekarang</button>
+            </div>
+        </div>
+    </main>
+
+    <footer style="background: #1a5490; color: white; text-align: center; padding: 20px; margin-top: 50px;">
+        <p>&copy; 2024 USDC - UHAMKA Nexus Center Student Development Center. Semua hak dilindungi.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>USDC - Sejarah & Filosofi - UHAMKA Nexus Center</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* Additional Styles for USDC Page */
+        .usdc-hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+            min-height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .usdc-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        .usdc-hero .subtitle {
+            font-size: 1.3rem;
+            margin-bottom: 5px;
+            opacity: 0.95;
+        }
+
+        .usdc-hero .description {
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin: 20px auto 0;
+            opacity: 0.9;
+        }
+
+        /* Sejarah & Filosofi Section */
+        .sejarah-filosofi {
+            background: white;
+            padding: 60px 20px;
+        }
+
+        .sejarah-filosofi .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .sejarah-filosofi h2 {
+            color: #667eea;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .sejarah-filosofi h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: #764ba2;
+            border-radius: 2px;
+        }
+
+        .sejarah-filosofi .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .filosofi-content {
+            margin-bottom: 40px;
+        }
+
+        .filosofi-content p {
+            text-align: justify;
+            line-height: 2;
+            color: #555;
+            margin-bottom: 20px;
+            font-size: 1.05rem;
+        }
+
+        .filosofi-box {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 10px;
+            margin: 30px 0;
+            font-style: italic;
+            line-height: 1.9;
+        }
+
+        /* Timeline Sejarah */
+        .timeline-sejarah {
+            position: relative;
+            padding: 20px 0;
+        }
+
+        .timeline-sejarah::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 4px;
+            height: 100%;
+            background: #667eea;
+        }
+
+        .timeline-item-usdc {
+            margin-bottom: 50px;
+            position: relative;
+        }
+
+        .timeline-item-usdc:nth-child(odd) {
+            padding-right: calc(50% + 30px);
+            text-align: right;
+        }
+
+        .timeline-item-usdc:nth-child(even) {
+            padding-left: calc(50% + 30px);
+            text-align: left;
+        }
+
+        .timeline-item-usdc::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 20px;
+            height: 20px;
+            background: white;
+            border: 4px solid #667eea;
+            border-radius: 50%;
+            top: 0;
+        }
+
+        .timeline-item-usdc .timeline-content {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .timeline-item-usdc .timeline-year {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: #667eea;
+            margin-bottom: 10px;
+        }
+
+        .timeline-item-usdc .timeline-text {
+            color: #666;
+            line-height: 1.8;
+        }
+
+        /* Philosophy Cards */
+        .philosophy-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin: 40px 0;
+        }
+
+        .philosophy-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            transition: 0.3s;
+        }
+
+        .philosophy-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.3);
+        }
+
+        .philosophy-card .icon {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+
+        .philosophy-card h3 {
+            color: white;
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+        }
+
+        .philosophy-card p {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 0.95rem;
+            text-align: justify;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .usdc-hero h1 {
+                font-size: 2rem;
+            }
+
+            .usdc-hero .subtitle {
+                font-size: 1.1rem;
+            }
+
+            .sejarah-filosofi h2 {
+                font-size: 1.8rem;
+            }
+
+            .timeline-sejarah::before {
+                left: 0;
+            }
+
+            .timeline-item-usdc::before {
+                left: 0;
+                transform: translateX(-10px);
+            }
+
+            .timeline-item-usdc:nth-child(odd),
+            .timeline-item-usdc:nth-child(even) {
+                padding-right: 0;
+                padding-left: 40px;
+                text-align: left;
+            }
+
+            .philosophy-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .usdc-hero {
+                padding: 40px 15px;
+                min-height: 300px;
+            }
+
+            .usdc-hero h1 {
+                font-size: 1.5rem;
+            }
+
+            .usdc-hero .subtitle {
+                font-size: 1rem;
+            }
+
+            .usdc-hero .description {
+                font-size: 0.95rem;
+            }
+
+            .sejarah-filosofi {
+                padding: 40px 15px;
+            }
+
+            .sejarah-filosofi h2 {
+                font-size: 1.4rem;
+            }
+
+            .timeline-item-usdc .timeline-content {
+                padding: 20px;
+            }
+
+            .philosophy-card {
+                padding: 20px;
+            }
+
+            .philosophy-card h3 {
+                font-size: 1.1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <i class="fas fa-university"></i>
+                <span>UHAMKA Nexus Center</span>
+            </div>
+            <button class="menu-toggle" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="tentang.html">Tentang</a></li>
+                <li><a href="struktur.html">Struktur</a></li>
+                <li><a href="galeri-foto.html">Galeri Foto</a></li>
+                <li><a href="galeri-video.html">Video</a></li>
+                <li><a href="audio.html">Audio</a></li>
+                <li><a href="usdc.html" class="active">USDC</a></li>
+                <li><a href="daftar.html">Daftar</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- USDC Hero Section -->
+    <section class="usdc-hero">
+        <div class="container">
+            <h1>USDC</h1>
+            <p class="subtitle">UHAMKA Nexus Center Student Development Center</p>
+            <p class="description">Wadah Pengembangan Mahasiswa Secara Holistik dengan Nilai-Nilai Islam dan Kemuhammadiyahan</p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Sejarah & Filosofi Section -->
+        <section class="sejarah-filosofi">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Sejarah & Filosofi USDC</h2>
+                </div>
+
+                <!-- Pendahuluan -->
+                <div class="filosofi-content">
+                    <h3 style="color: #667eea; margin-bottom: 20px; font-size: 1.5rem;">Awal Mula Perubahan</h3>
+                    <p>
+                        UHAMKA Nexus Center Student Development Center (USDC) lahir dari semangat perubahan yang tumbuh di kalangan mahasiswa Universitas Muhammadiyah Prof. Dr. Hamka. Di tengah dinamika kehidupan kampus, sekelompok mahasiswa menyadari bahwa potensi besar yang dimiliki mahasiswa tidak hanya perlu dikembangkan dalam bidang akademik, tetapi juga dalam aspek spiritual, kepemimpinan, dan kepedulian sosial.
+                    </p>
+                </div>
+
+                <!-- Filosofi Box -->
+                <div class="filosofi-box">
+                    <i class="fas fa-quote-left"></i>
+                    "Mahasiswa bukan hanya perlu menjadi cerdas secara akademik, tetapi juga harus berkembang menjadi individu yang berakhlak mulia, memiliki jiwa kepemimpinan, dan kepedulian terhadap masyarakat."
+                    <i class="fas fa-quote-right" style="float: right;"></i>
+                </div>
+
+                <!-- Visi Awal -->
+                <div class="filosofi-content">
+                    <h3 style="color: #667eea; margin-bottom: 20px; font-size: 1.5rem;">Visi & Misi Awal</h3>
+                    <p>
+                        Berawal dari diskusi sederhana setelah perkuliahan, muncul gagasan untuk membentuk sebuah wadah yang mampu menjadi tempat berkembangnya mahasiswa secara menyeluruh. Wadah tersebut diharapkan tidak hanya menjadi tempat berkegiatan, tetapi juga menjadi ruang pembelajaran, pembinaan karakter, serta penguatan nilai-nilai keislaman dan kemuhammadiyahan.
+                    </p>
+                </div>
+
+                <!-- Perkembangan -->
+                <div class="filosofi-content">
+                    <h3 style="color: #667eea; margin-bottom: 20px; font-size: 1.5rem;">Perjalanan Perkembangan</h3>
+                    <p>
+                        Seiring berjalannya waktu, USDC berkembang menjadi organisasi yang aktif dalam menyelenggarakan berbagai kegiatan, seperti seminar akademik, pelatihan kepemimpinan, hingga program pengabdian kepada masyarakat. Setiap kegiatan yang dilakukan tidak hanya berorientasi pada hasil, tetapi juga pada proses pembentukan karakter mahasiswa yang berakhlak mulia, berilmu, dan bertanggung jawab.
+                    </p>
+                </div>
+
+                <!-- Timeline -->
+                <div style="margin: 50px 0;">
+                    <h3 style="color: #667eea; margin-bottom: 40px; font-size: 1.5rem; text-align: center;">Perjalanan USDC</h3>
+                    <div class="timeline-sejarah">
+                        <div class="timeline-item-usdc">
+                            <div class="timeline-content">
+                                <div class="timeline-year">Fase Ide & Diskusi</div>
+                                <div class="timeline-text">
+                                    Sekelompok mahasiswa berdiskusi tentang pentingnya pengembangan holistik mahasiswa di luar akademik, meliputi aspek spiritual, kepemimpinan, dan sosial.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item-usdc">
+                            <div class="timeline-content">
+                                <div class="timeline-year">Pembentukan Wadah</div>
+                                <div class="timeline-text">
+                                    Terbentuk wadah khusus yang berfungsi sebagai tempat pembelajaran, pembinaan karakter, dan penguatan nilai-nilai keislaman dan kemuhammadiyahan.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item-usdc">
+                            <div class="timeline-content">
+                                <div class="timeline-year">Kegiatan Mulai Berjalan</div>
+                                <div class="timeline-text">
+                                    Berbagai kegiatan diluncurkan: seminar akademik, pelatihan kepemimpinan, program pengabdian kepada masyarakat dengan fokus pada pembentukan karakter.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item-usdc">
+                            <div class="timeline-content">
+                                <div class="timeline-year">Komitmen Berkelanjutan</div>
+                                <div class="timeline-text">
+                                    USDC terus berkembang dan berkomitmen menjadi wadah yang mendorong mahasiswa untuk berinovasi, berkolaborasi, dan memberikan kontribusi nyata bagi lingkungan kampus dan masyarakat luas.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Komitmen Hari Ini -->
+                <div class="filosofi-content">
+                    <h3 style="color: #667eea; margin-bottom: 20px; font-size: 1.5rem;">Komitmen hingga Saat Ini</h3>
+                    <p>
+                        Hingga saat ini, USDC terus berkomitmen menjadi wadah yang mendorong mahasiswa untuk berinovasi, berkolaborasi, dan memberikan kontribusi nyata bagi lingkungan kampus maupun masyarakat luas. Dengan berlandaskan nilai-nilai Islam dan semangat kemuhammadiyahan, USDC hadir sebagai bagian dari perjalanan mahasiswa UHAMKA Nexus Center dalam menciptakan perubahan positif yang berkelanjutan.
+                    </p>
+                </div>
+
+                <!-- Filosofi Utama -->
+                <div style="margin: 50px 0;">
+                    <h3 style="color: #667eea; margin-bottom: 40px; font-size: 1.5rem; text-align: center;">Pilar Filosofi USDC</h3>
+                    <div class="philosophy-grid">
+                        <div class="philosophy-card">
+                            <div class="icon">
+                                <i class="fas fa-book"></i>
+                            </div>
+                            <h3>Pengembangan Holistik</h3>
+                            <p>Mengembangkan mahasiswa secara menyeluruh di bidang akademik, spiritual, kepemimpinan, dan sosial untuk menciptakan pribadi yang utuh dan berkualitas.</p>
+                        </div>
+
+                        <div class="philosophy-card">
+                            <div class="icon">
+                                <i class="fas fa-mosque"></i>
+                            </div>
+                            <h3>Nilai Keislaman</h3>
+                            <p>Semua kegiatan USDC berlandaskan pada nilai-nilai Islam dan semangat kemuhammadiyahan yang mengutamakan integritas, keadilan, dan kebaikan.</p>
+                        </div>
+
+                        <div class="philosophy-card">
+                            <div class="icon">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <h3>Pembinaan Karakter</h3>
+                            <p>Fokus pada proses pembentukan karakter mahasiswa yang berakhlak mulia, berilmu, bertanggung jawab, dan siap menjadi pemimpin masa depan.</p>
+                        </div>
+
+                        <div class="philosophy-card">
+                            <div class="icon">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <h3>Kontribusi Sosial</h3>
+                            <p>Mendorong mahasiswa untuk memberikan kontribusi nyata kepada masyarakat dan lingkungan kampus, menciptakan perubahan positif yang berkelanjutan.</p>
+                        </div>
+
+                        <div class="philosophy-card">
+                            <div class="icon">
+                                <i class="fas fa-lightbulb"></i>
+                            </div>
+                            <h3>Inovasi & Kolaborasi</h3>
+                            <p>Mendorong semangat inovasi, kreativitas, dan kolaborasi dalam menghadapi tantangan dan menciptakan solusi untuk masa depan yang lebih baik.</p>
+                        </div>
+
+                        <div class="philosophy-card">
+                            <div class="icon">
+                                <i class="fas fa-seedling"></i>
+                            </div>
+                            <h3>Pertumbuhan Berkelanjutan</h3>
+                            <p>Berkomitmen untuk terus berkembang dan berinovasi, mengikuti perkembangan zaman sambil tetap setia pada nilai-nilai fundamental yang dipegang.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Penutup -->
+                <div class="filosofi-box" style="margin-top: 50px;">
+                    <h3 style="color: white; margin-bottom: 15px;">Visi Kedepan</h3>
+                    <p style="margin: 0;">
+                        USDC berkomitmen menjadi wadah pengembangan mahasiswa terdepan yang tidak hanya menghasilkan lulusan cerdas akademik, tetapi juga individu yang berakhlak mulia, memiliki kepemimpinan visioner, dan kepedulian sosial tinggi. Bersama-sama, kita membangun masa depan yang lebih cerah untuk UHAMKA Nexus Center dan masyarakat luas.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 60px 20px; text-align: center;">
+            <div class="container">
+                <h2 style="color: white; margin-bottom: 20px; font-size: 2rem;">Jadilah Bagian dari USDC</h2>
+                <p style="font-size: 1.1rem; margin-bottom: 30px; max-width: 700px; margin-left: auto; margin-right: auto;">
+                    Bergabunglah dengan kami dalam perjalanan pengembangan diri, inovasi, dan kepedulian sosial. Bersama menciptakan perubahan positif untuk kampus dan masyarakat.
+                </p>
+                <a href="daftar.html" class="btn btn-primary" style="background: white; color: #667eea; padding: 15px 40px; text-decoration: none; border-radius: 5px; font-weight: bold; display: inline-block; transition: 0.3s;">
+                    Bergabung Sekarang
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>UHAMKA Nexus Center</h4>
+                    <p>Universitas Muhammadiyah Prof. Dr. Hamka - Pendidikan Bermutu Bermakna</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Kontak</h4>
+                    <p>Email: info@UHAMKA Nexus Center.ac.id</p>
+                    <p>Telepon: +62 21-740-4688</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Ikuti Kami</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 UHAMKA Nexus Center - Universitas Muhammadiyah Prof. Dr. Hamka. Semua hak dilindungi.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

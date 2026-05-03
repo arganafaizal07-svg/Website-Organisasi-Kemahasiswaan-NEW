@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeri Foto - POM FTII UHAMKA</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <i class="fas fa-university"></i>
+                <span>POM FTII UHAMKA</span>
+            </div>
+            <button class="menu-toggle" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="tentang.html">Tentang</a></li>
+                <li class="nav-item dropdown">
+                    <a href="#" class="dropbtn">Organisasi Mahasiswa <i class="fas fa-caret-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="hima-ti.html">HIMA TI</a></li>
+                        <li><a href="hima-tm.html">HIMA TM</a></li>
+                        <li><a href="hima-te.html">HIMA TE</a></li>
+                        <li><a href="hima-sti.html">HIMA STI</a></li>
+                        <li><a href="hima-trm.html">HIMA TRM</a></li>
+                    </ul>
+                </li>
+                <li><a href="galeri-foto.html">Galeri Foto</a></li>
+                <li><a href="galeri-video.html">Galeri Video</a></li>
+                <li><a href="audio.html">Audio</a></li>
+                <li><a href="daftar.html">Open Recruitment</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <h1>Galeri Foto</h1>
+        <p>Dokumentasi kegiatan dan acara HIMA FTII UHAMKA dalam satu portal.</p>
+    </section>
+
+    <!-- Content -->
+    <section class="content-section">
+        <div class="container">
+            <!-- Category Tabs -->
+            <div style="display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; margin-bottom: 40px;">
+                <button class="btn btn-secondary" onclick="filterGallery('semua')" style="background: #667eea;">Semua</button>
+                <button class="btn btn-secondary" onclick="filterGallery('kegiatan')">Kegiatan</button>
+                <button class="btn btn-secondary" onclick="filterGallery('prestasi')">Prestasi</button>
+                <button class="btn btn-secondary" onclick="filterGallery('pengabdian')">Pengabdian</button>
+                <button class="btn btn-secondary" onclick="filterGallery('rekrutmen')">Open Recruitment</button>
+            </div>
+
+            <!-- Gallery Grid -->
+            <div class="gallery-grid">
+                <!-- Acara -->
+                <div class="gallery-item" data-category="kegiatan">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='250' height='250'%3E%3Crect fill='%23667eea' width='250' height='250'/%3E%3Ctext x='50%25' y='50%25' font-size='18' fill='white' text-anchor='middle' dominant-baseline='middle'%3EMusyawarah HIMA FTII%3C/text%3E%3C/svg%3E" alt="Musyawarah HIMA FTII">
+                    <div class="overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                    <p style="padding: 15px; text-align: center; background: white;">Musyawarah HIMA FTII 2024</p>
+                </div>
+
+                <div class="gallery-item" data-category="prestasi">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='250' height='250'%3E%3Crect fill='%23764ba2' width='250' height='250'/%3E%3Ctext x='50%25' y='50%25' font-size='18' fill='white' text-anchor='middle' dominant-baseline='middle'%3EAksi HIMA FTII%3C/text%3E%3C/svg%3E" alt="Aksi HIMA FTII">
+                    <div class="overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                    <p style="padding: 15px; text-align: center; background: white;">Aksi Pengabdian HIMA FTII</p>
+                </div>
+
+                <div class="gallery-item" data-category="pengabdian">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='250' height='250'%3E%3Crect fill='%23f093fb' width='250' height='250'/%3E%3Ctext x='50%25' y='50%25' font-size='18' fill='white' text-anchor='middle' dominant-baseline='middle'%3EFestival Kreasi%3C/text%3E%3C/svg%3E" alt="Festival Kreasi">
+                    <div class="overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                    <p style="padding: 15px; text-align: center; background: white;">Festival Kreasi HIMA FTII</p>
+                </div>
+
+                <div class="gallery-item" data-category="prestasi">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='250' height='250'%3E%3Crect fill='%2343e97b' width='250' height='250'/%3E%3Ctext x='50%25' y='50%25' font-size='18' fill='white' text-anchor='middle' dominant-baseline='middle'%3EPrestasi HIMA FTII%3C/text%3E%3C/svg%3E" alt="Prestasi HIMA FTII">
+                    <div class="overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                    <p style="padding: 15px; text-align: center; background: white;">Prestasi Lomba dan Penghargaan</p>
+                </div>
+
+                <div class="gallery-item" data-category="pengabdian">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='250' height='250'%3E%3Crect fill='%23ff6b6b' width='250' height='250'/%3E%3Ctext x='50%25' y='50%25' font-size='18' fill='white' text-anchor='middle' dominant-baseline='middle'%3EBakti Sosial FTII%3C/text%3E%3C/svg%3E" alt="Bakti Sosial FTII">
+                    <div class="overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                    <p style="padding: 15px; text-align: center; background: white;">Bakti Sosial dan Pengabdian</p>
+                </div>
+
+                <div class="gallery-item" data-category="kegiatan">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='250' height='250'%3E%3Crect fill='%234facfe' width='250' height='250'/%3E%3Ctext x='50%25' y='50%25' font-size='18' fill='white' text-anchor='middle' dominant-baseline='middle'%3EProgram Kerja%3C/text%3E%3C/svg%3E" alt="Program Kerja">
+                    <div class="overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                    <p style="padding: 15px; text-align: center; background: white;">Program Kerja dan Agenda HIMA</p>
+                </div>
+
+                <div class="gallery-item" data-category="rekrutmen">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='250' height='250'%3E%3Crect fill='%23ffa500' width='250' height='250'/%3E%3Ctext x='50%25' y='50%25' font-size='18' fill='white' text-anchor='middle' dominant-baseline='middle'%3EOpen Recruitment%3C/text%3E%3C/svg%3E" alt="Open Recruitment">
+                    <div class="overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                    <p style="padding: 15px; text-align: center; background: white;">Open Recruitment Anggota Baru</p>
+                </div>
+
+                <div class="gallery-item" data-category="kegiatan">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='250' height='250'%3E%3Crect fill='%235a67d8' width='250' height='250'/%3E%3Ctext x='50%25' y='50%25' font-size='18' fill='white' text-anchor='middle' dominant-baseline='middle'%3ESeminar%3C/text%3E%3C/svg%3E" alt="Seminar HIMA">
+                    <div class="overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                    <p style="padding: 15px; text-align: center; background: white;">Seminar & Workshop HIMA</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>POM FTII UHAMKA</h4>
+                    <p>Portal terpusat untuk informasi, dokumentasi, dan interaksi seluruh organisasi mahasiswa FTII UHAMKA.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Kontak</h4>
+                    <p>Email: info@ftii-uhamka.ac.id</p>
+                    <p>Telepon: +62 21-740-4688</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Ikuti Kami</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 POM FTII UHAMKA. Semua hak dilindungi.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        function filterGallery(category) {
+            const items = document.querySelectorAll('.gallery-item');
+            items.forEach(item => {
+                if (category === 'semua') {
+                    item.style.display = 'block';
+                } else {
+                    if (item.getAttribute('data-category') === category) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                }
+            });
+        }
+
+        // Add click handler for gallery items
+        document.querySelectorAll('.gallery-item').forEach(item => {
+            item.addEventListener('click', function() {
+                const img = this.querySelector('img');
+                openGallery(img.src);
+            });
+        });
+    </script>
+</body>
+</html>
